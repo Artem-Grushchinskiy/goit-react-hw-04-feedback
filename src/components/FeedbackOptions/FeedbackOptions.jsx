@@ -3,6 +3,7 @@ import './Feedback.module.css';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const stateArr = Object.keys(options);
+  // console.log(stateArr);
 
   return (
     <div>
@@ -21,6 +22,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.object,
+  options: PropTypes.objectOf(PropTypes.string),
   onLeaveFeedback: PropTypes.func,
 };
